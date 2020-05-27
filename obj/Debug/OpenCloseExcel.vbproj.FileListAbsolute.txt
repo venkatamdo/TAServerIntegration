@@ -1,0 +1,12 @@
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\bin\Debug\OpenCloseExcel.exe.config
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\bin\Debug\OpenCloseExcel.exe
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\bin\Debug\OpenCloseExcel.pdb
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\bin\Debug\OpenCloseExcel.xml
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\obj\Debug\OpenCloseExcel.vbprojAssemblyReference.cache
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\obj\Debug\OpenCloseExcel.Form1.resources
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\obj\Debug\OpenCloseExcel.Resources.resources
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\obj\Debug\OpenCloseExcel.vbproj.GenerateResource.cache
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\obj\Debug\OpenCloseExcel.vbproj.CoreCompileInputs.cache
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\obj\Debug\OpenCloseExcel.exe
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\obj\Debug\OpenCloseExcel.xml
+C:\Users\amar\OneDrive\Documents\GitHub\OpenCloseExcel\OpenCloseExcel\obj\Debug\OpenCloseExcel.pdb

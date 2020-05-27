@@ -1,0 +1,1372 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>nsoftware.InAzure</name>
+    </assembly>
+    <members>
+        <member name="F:nsoftware.core.LoadCertificateForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:nsoftware.core.LoadCertificateForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:nsoftware.core.LoadCertificateForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestCharactersEventArgs">
+            <summary>Event arguments for the Characters event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestCommentEventArgs">
+            <summary>Event arguments for the Comment event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestConnectedEventArgs">
+            <summary>Event arguments for the Connected event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestConnectionStatusEventArgs">
+            <summary>Event arguments for the ConnectionStatus event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestDisconnectedEventArgs">
+            <summary>Event arguments for the Disconnected event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestEndElementEventArgs">
+            <summary>Event arguments for the EndElement event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestEndPrefixMappingEventArgs">
+            <summary>Event arguments for the EndPrefixMapping event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestErrorEventArgs">
+            <summary>Event arguments for the Error event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestEvalEntityEventArgs">
+            <summary>Event arguments for the EvalEntity event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestHeaderEventArgs">
+            <summary>Event arguments for the Header event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestIgnorableWhitespaceEventArgs">
+            <summary>Event arguments for the IgnorableWhitespace event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestMetaEventArgs">
+            <summary>Event arguments for the Meta event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestPIEventArgs">
+            <summary>Event arguments for the PI event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestRedirectEventArgs">
+            <summary>Event arguments for the Redirect event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestSpecialSectionEventArgs">
+            <summary>Event arguments for the SpecialSection event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestSSLServerAuthenticationEventArgs">
+            <summary>Event arguments for the SSLServerAuthentication event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestSSLStatusEventArgs">
+            <summary>Event arguments for the SSLStatus event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestStartElementEventArgs">
+            <summary>Event arguments for the StartElement event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestStartPrefixMappingEventArgs">
+            <summary>Event arguments for the StartPrefixMapping event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.AzurerequestStatusEventArgs">
+            <summary>Event arguments for the Status event.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.SetPostData(System.Byte[],System.Int32,System.Int32)">
+            <summary>The data to post with the URL if the POST method is used.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.AddParameter(System.String,System.String)">
+            <summary>Adds a parameter to the query string.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.Attr(System.String)">
+            <summary>Returns the value of the specified attribute.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.Config(System.String)">
+            <summary>Sets or retrieves a configuration setting .</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.DoEvents">
+            <summary>Processes events from the internal message queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.Get(System.String)">
+            <summary>Fetches the document using the HTTP GET method.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.Interrupt">
+            <summary>Interrupt the current method.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.Reset">
+            <summary>Resets the component.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Azurerequest.SubmitTo(System.String)">
+            <summary>Post current parameters to the URL specified by the 'URL' parameter.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.RuntimeLicense">
+            <summary>Runtime license key (derived from the development license, if any).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnCharacters">
+            <summary>Fired for plain text segments of the input stream.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnComment">
+            <summary>Fired when a comment section is encountered.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnConnected">
+            <summary>Fired immediately after a connection completes (or fails).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnConnectionStatus">
+            <summary>Fired to indicate changes in connection state.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnDisconnected">
+            <summary>Fired when a connection is closed.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnEndElement">
+            <summary>Fired when an end-element tag is encountered.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnEndPrefixMapping">
+            <summary>Fired when leaving the scope of a namespace declaration.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnError">
+            <summary>Information about errors during data delivery.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnEvalEntity">
+            <summary>Fired every time an entity needs to be evaluated.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnHeader">
+            <summary>Fired every time a header line comes in.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnIgnorableWhitespace">
+            <summary>Fired when a section of ignorable whitespace is encountered.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnMeta">
+            <summary>Fired when a meta section is encountered.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnPI">
+            <summary>Fired when a processing instruction section is encountered.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnRedirect">
+            <summary>Fired when a redirection is received from the server.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnSpecialSection">
+            <summary>Fired when a special section is encountered.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnSSLServerAuthentication">
+            <summary>Fired after the server presents its certificate to the client.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnSSLStatus">
+            <summary>Shows the progress of the secure connection.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnStartElement">
+            <summary>Fired when a begin-element tag is encountered in the document.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnStartPrefixMapping">
+            <summary>Fired when entering the scope of a namespace declaration.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Azurerequest.OnStatus">
+            <summary>Fired when the HTTP status line is received from the server.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Firewall">
+            <summary>A set of properties related to firewall access.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Namespaces">
+            <summary>A collection of namespaces in the current stack.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Parameters">
+            <summary>Parameters to be sent in the request.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.ParsedHeaders">
+            <summary>Collection of headers returned from the last request.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Proxy">
+            <summary>A set of properties related to proxy access.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.SSLAcceptServerCert">
+            <summary>Instructs the component to unconditionally accept the server certificate that matches the supplied certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.SSLCert">
+            <summary>The certificate to be used during SSL negotiation.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.SSLServerCert">
+            <summary>The server certificate for the last established connection.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XAttributes">
+            <summary>A collection of attributes of the current element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XChildren">
+            <summary>Collection of child elements of the current element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.AccessKey">
+            <summary>The Windows Azure access key.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Account">
+            <summary>The Windows Azure storage account name.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.APIVersion">
+            <summary>Version of the API you're using to submit a transaction.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.BuildDOM">
+            <summary>When True, an internal object model of the XML document is created.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Connected">
+            <summary>Shows whether the component is connected.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.ContentType">
+            <summary>Content type for posts and puts.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.FollowRedirects">
+            <summary>Determines what happens when the server issues a redirect.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.HTTPMethod">
+            <summary>The HTTP method used for the request.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Idle">
+            <summary>The current status of the component.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.LocalFile">
+            <summary>The path to a local file for downloading.  If the file exists, it is overwritten.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.LocalHost">
+            <summary>The name of the local host or user-assigned IP interface through which connections are initiated or accepted.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.OtherHeaders">
+            <summary>Other headers as determined by the user (optional).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.PostDataB">
+            <summary>The data to post with the URL if the POST method is used.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.PostData">
+            <summary>The data to post with the URL if the POST method is used.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.StatusLine">
+            <summary>The first line of the last server response.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.StoreType">
+            <summary>The type of store the for which the request is being built.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Timeout">
+            <summary>A timeout for the component.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.TransferredDataB">
+            <summary>The contents of the last response from the server.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.TransferredData">
+            <summary>The contents of the last response from the server.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.TransferredDataLimit">
+            <summary>The maximum of bytes of data to be transferred.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.TransferredHeaders">
+            <summary>The full set of headers as received from the server.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.Validate">
+            <summary>When True, the parser checks that the document consists of well-formed XML.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XElement">
+            <summary>The name of the current element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XErrorPath">
+            <summary>An XPath to check the server response for errors.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XNamespace">
+            <summary>The namespace of the current element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XParent">
+            <summary>The parent of the current element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XPath">
+            <summary>Provides a way to point to a specific element in the response.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XPrefix">
+            <summary>The prefix of the current element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XSubTree">
+            <summary>A snapshot of the current element in the document.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Azurerequest.XText">
+            <summary>The text of the current element.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobBlobListEventArgs">
+            <summary>Event arguments for the BlobList event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobBlockListEventArgs">
+            <summary>Event arguments for the BlockList event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobConnectedEventArgs">
+            <summary>Event arguments for the Connected event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobContainerListEventArgs">
+            <summary>Event arguments for the ContainerList event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobDisconnectedEventArgs">
+            <summary>Event arguments for the Disconnected event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobEndTransferEventArgs">
+            <summary>Event arguments for the EndTransfer event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobErrorEventArgs">
+            <summary>Event arguments for the Error event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobHeaderEventArgs">
+            <summary>Event arguments for the Header event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobMetadataEventArgs">
+            <summary>Event arguments for the Metadata event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobPrefixListEventArgs">
+            <summary>Event arguments for the PrefixList event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobSSLServerAuthenticationEventArgs">
+            <summary>Event arguments for the SSLServerAuthentication event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobSSLStatusEventArgs">
+            <summary>Event arguments for the SSLStatus event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobStartTransferEventArgs">
+            <summary>Event arguments for the StartTransfer event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobStatusEventArgs">
+            <summary>Event arguments for the Status event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.BlobTransferEventArgs">
+            <summary>Event arguments for the Transfer event.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.SetBlobData(System.Byte[],System.Int32,System.Int32)">
+            <summary>Contains the data of one blob/block.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.AddBlock(System.Int32,System.String)">
+            <summary>Adds a block to the blocks list that will be assembled to form a blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.AddUserMetadata(System.String,System.String)">
+            <summary>Adds user specified metadata to the Metadata list.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.Config(System.String)">
+            <summary>Sets or retrieves a configuration setting .</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.CopyBlob(System.String,System.String,System.String)">
+            <summary>Copies a source blob to a destination blob within the same storage account.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.CreateBlob(System.String)">
+            <summary>Creates a new blob or updates the content of an existing blob within a container.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.CreateBlock(System.String,System.String)">
+            <summary>Creates a new block to be committed as part of a block blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.CreateContainer">
+            <summary>Creates a new container within a storage account.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.CreateSnapshot(System.String)">
+            <summary>Creates a read-only snapshot of a blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.DeleteBlob(System.String,System.Int32)">
+            <summary>Deletes a blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.DeleteContainer">
+            <summary>Deletes the container and any blobs that it contains.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.DoEvents">
+            <summary>Processes events from the internal message queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.GetBlob(System.String)">
+            <summary>Reads or downloads a blob, including its metadata and properties.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.GetBlobMetadata(System.String)">
+            <summary>Gets the user-specified metadata for a blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.GetContainerACL">
+            <summary>Gets the access policy for the container.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.GetContainerMetadata">
+            <summary>Gets the user-specified metadata for a container.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.GetLink(System.String,System.Int32)">
+            <summary>Creates a link to access a blob for the amount of seconds specified.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.Interrupt">
+            <summary>Interrupt the current method.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.LeaseBlob(System.String,System.Int32)">
+            <summary>Lease a blob to establish an exclusive one minute lock on a blob.   LeaseAction: Acquire(0): Requests a new lease. Renew(1): Renews the lease. Release(2): Release the lease. Break(3): Break the lease, if the blob has an active lease.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.ListBlobs">
+            <summary>List the blobs under a specified container.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.ListBlocks(System.String,System.Int32)">
+            <summary>List the blocks under the specified block blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.ListContainers">
+            <summary>List the containers under the specified account.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.PutBlockList(System.String)">
+            <summary>Commits a blob using the specified set of block IDs that make up the blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.Reset">
+            <summary>Resets request-related properties.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.ResetHeaders">
+            <summary>Resets all HTTP headers, cookies, and localfile.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.SetBlobMetadata(System.String)">
+            <summary>Sets the user-specified metadata for a blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.SetContainerACL">
+            <summary>Sets the access policy for the container.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.SetContainerMetadata">
+            <summary>Sets the user-specified metadata for a container.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.SetDownloadStream(System.IO.Stream)">
+            <summary>Sets the stream to which a retrieved blob will be written.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Blob.SetUploadStream(System.IO.Stream)">
+            <summary>Sets the stream to be uploaded to the server.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.RuntimeLicense">
+            <summary>Runtime license key (derived from the development license, if any).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnBlobList">
+            <summary>Fired for every blob when ListBlobs is called.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnBlockList">
+            <summary>Fired for every block when ListBlocks is called.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnConnected">
+            <summary>Fired immediately after a connection completes (or fails).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnContainerList">
+            <summary>Fired for every container when ListContainers is called.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnDisconnected">
+            <summary>Fired when a connection is closed.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnEndTransfer">
+            <summary>Fired when a document finishes transferring.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnError">
+            <summary>Information about errors during data delivery.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnHeader">
+            <summary>Fired every time a header line comes in.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnMetadata">
+            <summary>Fired when valid blob or container metadata is returned.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnPrefixList">
+            <summary>Fired for each blob prefix returned when BlobDelimiter is set and ListBlobs is called..</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnSSLServerAuthentication">
+            <summary>Fired after the server presents its certificate to the client.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnSSLStatus">
+            <summary>Shows the progress of the secure connection.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnStartTransfer">
+            <summary>Fired when a document starts transferring (after the headers).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnStatus">
+            <summary>Fired when the HTTP status line is received from the server.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Blob.OnTransfer">
+            <summary>Fired while a document transfers (delivers document).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Blobs">
+            <summary>Collection of blobs in the current blob listing.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Blocks">
+            <summary>Collection of blocks in the current block listing.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Containers">
+            <summary>Collection of containers in the current container listing. The list of containers returned by a call to ListContainers .</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Firewall">
+            <summary>A set of properties related to firewall access.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Metadata">
+            <summary>Collection of blob/container metadata.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.ParsedHeaders">
+            <summary>Collection of headers returned from the last request.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Proxy">
+            <summary>A set of properties related to proxy access.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.SSLAcceptServerCert">
+            <summary>Instructs the component to unconditionally accept the server certificate that matches the supplied certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.SSLCert">
+            <summary>The certificate to be used during SSL negotiation.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.SSLServerCert">
+            <summary>The server certificate for the last established connection.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.AccessKey">
+            <summary>The Windows Azure access key.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.AccessPolicy">
+            <summary>The access policy assigned to a container.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Account">
+            <summary>The Windows Azure storage account name.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.BlobDataB">
+            <summary>Contains the data of one blob/block.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.BlobData">
+            <summary>Contains the data of one blob/block.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.BlobDelimiter">
+            <summary>The delimiter to be used when listing blobs.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.BlobSnapshot">
+            <summary>The DateTime value that uniquely identifies a snapshot.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Connected">
+            <summary>Shows whether the component is connected.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.ContainerName">
+            <summary>Identifies the container in which an operation will be performed.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.EncryptionPassword">
+            <summary>The password to use when encrypting/decrypting a blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.FollowRedirects">
+            <summary>Determines what happens when the server issues a redirect.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Idle">
+            <summary>The current status of the component.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.IfMatch">
+            <summary>Specifies the condition for which the operation should be performed.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.LeaseId">
+            <summary>The unique Lease ID of a blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.LocalFile">
+            <summary>The path to a local file for uploading or downloading blob data.    When downloading, if the file exists it is overwritten (optional).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.LocalHost">
+            <summary>The name of the local host or user-assigned IP interface through which connections are initiated or accepted.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Marker">
+            <summary>A string value that identifies the current position in the list of results.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.OtherHeaders">
+            <summary>Other headers as determined by the user (optional).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Overwrite">
+            <summary>Whether or not the component should overwrite files during transfer.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Prefix">
+            <summary>Filters the results to return only blobs/containers whose names begin with the specified prefix.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Range">
+            <summary>The byte-range to be sent to the server.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.StatusLine">
+            <summary>The first line of the last server response.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.Timeout">
+            <summary>A timeout for the component.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Blob.UseSSL">
+            <summary>Specifies whether SSL will be used to access Azure Blob.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueConnectedEventArgs">
+            <summary>Event arguments for the Connected event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueDisconnectedEventArgs">
+            <summary>Event arguments for the Disconnected event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueEndTransferEventArgs">
+            <summary>Event arguments for the EndTransfer event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueErrorEventArgs">
+            <summary>Event arguments for the Error event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueHeaderEventArgs">
+            <summary>Event arguments for the Header event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueMessageEventArgs">
+            <summary>Event arguments for the Message event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueMetadataEventArgs">
+            <summary>Event arguments for the Metadata event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueQueueListEventArgs">
+            <summary>Event arguments for the QueueList event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueSSLServerAuthenticationEventArgs">
+            <summary>Event arguments for the SSLServerAuthentication event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueSSLStatusEventArgs">
+            <summary>Event arguments for the SSLStatus event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueStartTransferEventArgs">
+            <summary>Event arguments for the StartTransfer event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueStatusEventArgs">
+            <summary>Event arguments for the Status event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.QueueTransferEventArgs">
+            <summary>Event arguments for the Transfer event.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.AddUserMetadata(System.String,System.String)">
+            <summary>Adds a name value pair to the metadata to be associated with a queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.ClearMessages">
+            <summary>Clears all messages from the queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.Config(System.String)">
+            <summary>Sets or retrieves a configuration setting .</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.CreateMessage(System.String)">
+            <summary>Adds a message to the queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.CreateQueue">
+            <summary>Creates a new queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.DeleteMessage(System.String,System.String)">
+            <summary>Deletes the specified message from the queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.DeleteQueue">
+            <summary>Deletes the specified queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.DoEvents">
+            <summary>Processes events from the internal message queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.GetQueueMetadata">
+            <summary>Retrieves the user defined metadata for a queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.Interrupt">
+            <summary>Interrupt the current method.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.ListMessages">
+            <summary>Retrieves message(s) from the current queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.ListQueues">
+            <summary>Lists all of the queues in a given storage account.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.PeekMessages">
+            <summary>Retrieves a message from the front of the queue, without changing the message visibility.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.Reset">
+            <summary>Resets request-related properties.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.ResetHeaders">
+            <summary>Resets all HTTP headers, cookies, and localfile.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Queue.SetQueueMetadata">
+            <summary>Sets user-defined metadata on the queue.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.RuntimeLicense">
+            <summary>Runtime license key (derived from the development license, if any).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnConnected">
+            <summary>Fired immediately after a connection completes (or fails).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnDisconnected">
+            <summary>Fired when a connection is closed.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnEndTransfer">
+            <summary>Fired when a document finishes transferring.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnError">
+            <summary>Information about errors during data delivery.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnHeader">
+            <summary>Fired every time a header line comes in.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnMessage">
+            <summary>Fired for every message when ListMessages or PeekMessages is called.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnMetadata">
+            <summary>Fired for each name value pair in a queue's metadata when GetQueueMetadata or ListQueues is called.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnQueueList">
+            <summary>Fired for every queue when ListQueues is called.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnSSLServerAuthentication">
+            <summary>Fired after the server presents its certificate to the client.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnSSLStatus">
+            <summary>Shows the progress of the secure connection.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnStartTransfer">
+            <summary>Fired when a document starts transferring (after the headers).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnStatus">
+            <summary>Fired when the HTTP status line is received from the server.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Queue.OnTransfer">
+            <summary>Fired while a document transfers (delivers document).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Firewall">
+            <summary>A set of properties related to firewall access.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Messages">
+            <summary>The list of messages returned by a call to ListMessages or PeekMessages .</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Metadata">
+            <summary>Returns a name-value pair list associated with the queue as metadata.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.ParsedHeaders">
+            <summary>Collection of headers returned from the last request.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Proxy">
+            <summary>A set of properties related to proxy access.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Queues">
+            <summary>The list of queues returned by a call to ListQueues .</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.SSLAcceptServerCert">
+            <summary>Instructs the component to unconditionally accept the server certificate that matches the supplied certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.SSLCert">
+            <summary>The certificate to be used during SSL negotiation.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.SSLServerCert">
+            <summary>The server certificate for the last established connection.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.AccessKey">
+            <summary>The Windows Azure access key.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Account">
+            <summary>The Windows Azure storage account name.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.ApproximateMessageCount">
+            <summary>The approximate number of messages in the queue.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Connected">
+            <summary>Shows whether the component is connected.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.FollowRedirects">
+            <summary>Determines what happens when the server issues a redirect.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Idle">
+            <summary>The current status of the component.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.LocalHost">
+            <summary>The name of the local host or user-assigned IP interface through which connections are initiated or accepted.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.OtherHeaders">
+            <summary>Other headers as determined by the user (optional).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.QueueMarker">
+            <summary>A string value that identifies the current position in the list of results.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.QueueName">
+            <summary>The name of the current queue.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.QueuePrefix">
+            <summary>If set, ListQueues will only return queues that begin with this prefix.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.StatusLine">
+            <summary>The first line of the last server response.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.Timeout">
+            <summary>A timeout for the component.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.UseSSL">
+            <summary>Use SSL to access Azure Blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Queue.VisibilityTimeout">
+            <summary>The visibility duration in seconds for messages in the queue.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableConnectedEventArgs">
+            <summary>Event arguments for the Connected event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableDisconnectedEventArgs">
+            <summary>Event arguments for the Disconnected event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableEndTransferEventArgs">
+            <summary>Event arguments for the EndTransfer event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableEntityListEventArgs">
+            <summary>Event arguments for the EntityList event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableErrorEventArgs">
+            <summary>Event arguments for the Error event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableHeaderEventArgs">
+            <summary>Event arguments for the Header event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableSSLServerAuthenticationEventArgs">
+            <summary>Event arguments for the SSLServerAuthentication event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableSSLStatusEventArgs">
+            <summary>Event arguments for the SSLStatus event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableStartTransferEventArgs">
+            <summary>Event arguments for the StartTransfer event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableStatusEventArgs">
+            <summary>Event arguments for the Status event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableTableListEventArgs">
+            <summary>Event arguments for the TableList event.</summary>
+        </member>
+        <member name="T:nsoftware.InAzure.TableTransferEventArgs">
+            <summary>Event arguments for the Transfer event.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.AddEntityProperty(System.String,System.Int32,System.String)">
+            <summary>Adds an entity property that will be used for inserting, updating or merging an entity.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.Config(System.String)">
+            <summary>Sets or retrieves a configuration setting .</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.CreateTable">
+            <summary>Creates a new table within a storage account.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.DeleteEntity(System.String,System.String)">
+            <summary>Deletes an entity within a table.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.DeleteTable">
+            <summary>Deletes a table from a storage account.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.DoEvents">
+            <summary>Processes events from the internal message queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.GetEntity(System.String,System.String)">
+            <summary>Gets the entity specified by PartitionKey and RowKey.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.InsertEntity(System.String,System.String)">
+            <summary>Inserts a new entity into a table.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.Interrupt">
+            <summary>Interrupt the current method.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.ListEntities">
+            <summary>Lists the entities in a table.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.ListTables">
+            <summary>Lists the tables in a storage account.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.MergeEntity">
+            <summary>Updates an existing entity within a table by merging new property values into the entity.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.Reset">
+            <summary>Resets request-related properties.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.ResetHeaders">
+            <summary>Resets all HTTP headers, cookies, and localfile.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Table.UpdateEntity">
+            <summary>Updates an existing entity within a table by replacing it.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.RuntimeLicense">
+            <summary>Runtime license key (derived from the development license, if any).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnConnected">
+            <summary>Fired immediately after a connection completes (or fails).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnDisconnected">
+            <summary>Fired when a connection is closed.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnEndTransfer">
+            <summary>Fired when a document finishes transferring.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnEntityList">
+            <summary>Fired for every entity when ListEntities is called.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnError">
+            <summary>Information about errors during data delivery.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnHeader">
+            <summary>Fired every time a header line comes in.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnSSLServerAuthentication">
+            <summary>Fired after the server presents its certificate to the client.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnSSLStatus">
+            <summary>Shows the progress of the secure connection.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnStartTransfer">
+            <summary>Fired when a document starts transferring (after the headers).</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnStatus">
+            <summary>Fired when the HTTP status line is received from the server.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnTableList">
+            <summary>Fired for every table when ListTables is called.</summary>
+        </member>
+        <member name="E:nsoftware.InAzure.Table.OnTransfer">
+            <summary>Fired while a document transfers (delivers document).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.EntityProperties">
+            <summary>The list of entity properties of current entity.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.Firewall">
+            <summary>A set of properties related to firewall access.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.ParsedHeaders">
+            <summary>Collection of headers returned from the last request.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.Proxy">
+            <summary>A set of properties related to proxy access.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.SSLAcceptServerCert">
+            <summary>Instructs the component to unconditionally accept the server certificate that matches the supplied certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.SSLCert">
+            <summary>The certificate to be used during SSL negotiation.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.SSLServerCert">
+            <summary>The server certificate for the last established connection.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.Tables">
+            <summary>The list of tables returned by a call to ListTables .</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.AccessKey">
+            <summary>The Windows Azure access key.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.Account">
+            <summary>The Windows Azure storage account name.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.Connected">
+            <summary>Shows whether the component is connected.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.EntityCount">
+            <summary>Returns the number of entities in the response from the server.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.EntityETag">
+            <summary>Gets the etag of the current entity.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.EntityIndex">
+            <summary>Indicates the index of the current entity.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.EntityLastModified">
+            <summary>Gets the last modification date of the current entity.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.EntityPartitionKey">
+            <summary>Gets the partition key of the current entity.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.EntityRowKey">
+            <summary>Gets the row key of the current entity.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.EntityURL">
+            <summary>Gets the URL of the current entity.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.FollowRedirects">
+            <summary>Determines what happens when the server issues a redirect.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.Idle">
+            <summary>The current status of the component.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.IfMatch">
+            <summary>Specifies the condition for which the update/merge/delete should be performed.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.LocalHost">
+            <summary>The name of the local host or user-assigned IP interface through which connections are initiated or accepted.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.NextPartitionKey">
+            <summary>Indicates the next partition key to be returned in a subsequent query against the table.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.NextRowKey">
+            <summary>Indicates the next row key to be returned in a subsequent query against the table.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.NextTableName">
+            <summary>Indicates the name of the next table in the list, if the list of tables returned is not complete.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.OtherHeaders">
+            <summary>Other headers as determined by the user (optional).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.StatusLine">
+            <summary>The first line of the last server response.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.TableName">
+            <summary>The name of current table.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.Timeout">
+            <summary>A timeout for the component.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Table.UseSSL">
+            <summary>Use SSL to access Azure Blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Firewall.#ctor">
+            <summary>The firewall the component will connect through.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Firewall.AutoDetect">
+            <summary>This property tells the component whether or not to automatically detect and use firewall system settings, if available.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Firewall.FirewallType">
+            <summary>This property determines the type of firewall to connect through.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Firewall.Host">
+            <summary>This property contains the name or IP address of firewall (optional).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Firewall.Password">
+            <summary>This property contains a password if authentication is to be used when connecting through the firewall.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Firewall.Port">
+            <summary>This property contains the TCP port for the firewall Host .</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Firewall.User">
+            <summary>This property contains a user name if authentication is to be used connecting through a firewall.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.XMLNamespace.#ctor">
+            <summary>An XML namespace from the current namespace stack.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.XMLNamespace.#ctor(System.String,System.String)">
+            <summary>An XML namespace from the current namespace stack.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLNamespace.Prefix">
+            <summary>The Prefix for the Namespace .</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLNamespace.URI">
+            <summary>Namespace URI associated with the corresponding Prefix .</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureParam.#ctor">
+            <summary>An object representing a single Azure Parameter.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureParam.Name">
+            <summary>The Name of the Azure Parameter.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureParam.Value">
+            <summary>The Value of the Azure Parameter.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Header.#ctor">
+            <summary>An HTTP header as it is received from the server.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Header.#ctor(System.String,System.String)">
+            <summary>An HTTP header as it is received from the server.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Header.Field">
+            <summary>This property contains the name of the HTTP header (same case as it is delivered).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Header.Value">
+            <summary>This property contains the header contents.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Proxy.#ctor">
+            <summary>The proxy the component will connect to.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Proxy.#ctor(System.String,System.Int32)">
+            <summary>The proxy the component will connect to.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Proxy.#ctor(System.String,System.Int32,System.String,System.String)">
+            <summary>The proxy the component will connect to.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Proxy.AuthScheme">
+            <summary>This property is used to tell the component which  type of authorization to perform when connecting to the proxy.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Proxy.AutoDetect">
+            <summary>This property tells the component whether or not to automatically detect and use proxy system settings, if available.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Proxy.Password">
+            <summary>This property contains a password if authentication is to be used for the proxy.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Proxy.Port">
+            <summary>This property contains the TCP port for the proxy Server (default 80).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Proxy.Server">
+            <summary>If a proxy Server is given, then the HTTP request is sent to the proxy instead of the server otherwise specified.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Proxy.SSL">
+            <summary>This property determines when to use SSL for the connection to the proxy.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Proxy.User">
+            <summary>This property contains a user name, if authentication is to be used for the proxy.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Certificate.#ctor">
+            <summary>The digital certificate being used.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Certificate.#ctor(System.String)">
+            <summary>The digital certificate being used.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Certificate.#ctor(System.Byte[])">
+            <summary>The digital certificate being used.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Certificate.#ctor(nsoftware.InAzure.CertStoreTypes,System.String,System.String,System.String)">
+            <summary>The digital certificate being used.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Certificate.#ctor(nsoftware.InAzure.CertStoreTypes,System.String,System.String,System.Byte[])">
+            <summary>The digital certificate being used.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Certificate.#ctor(nsoftware.InAzure.CertStoreTypes,System.Byte[],System.String,System.String)">
+            <summary>The digital certificate being used.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.Certificate.#ctor(nsoftware.InAzure.CertStoreTypes,System.Byte[],System.String,System.Byte[])">
+            <summary>The digital certificate being used.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.EffectiveDate">
+            <summary>The date which this certificate becomes valid.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.EncodedB">
+            <summary>The certificate (PEM/base64 encoded).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.Encoded">
+            <summary>The certificate (PEM/base64 encoded).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.ExpirationDate">
+            <summary>The date the certificate expires.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.ExtendedKeyUsage">
+            <summary>A comma-delimited list of extended key usage identifiers.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.Fingerprint">
+            <summary>The hex-encoded, 16-byte MD5 fingerprint of the certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.Issuer">
+            <summary>The issuer of the certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.PrivateKey">
+            <summary>The private key of the certificate (if available).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.PrivateKeyAvailable">
+            <summary>Shows whether a PrivateKey is available for the  selected certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.PrivateKeyContainer">
+            <summary>The name of the PrivateKey container for the  certificate (if available).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.PublicKey">
+            <summary>The public key of the certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.PublicKeyAlgorithm">
+            <summary>Textual description of the public key algorithm of the  certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.PublicKeyLength">
+            <summary>The length of the certificate public key (in bits).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.SerialNumber">
+            <summary>The serial number of the certificate encoded as a  string.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.SignatureAlgorithm">
+            <summary>Text description of the signature algorithm of the  certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.StoreB">
+            <summary>The name of the certificate store for the client certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.Store">
+            <summary>The name of the certificate store for the client certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.StorePassword">
+            <summary>If the certificate store is of a type that requires  a password, this property is used to specify that  password in order to open the certificate store.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.StoreType">
+            <summary>The type of certificate store for this certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.Subject">
+            <summary>The subject of the certificate used for client authentication.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.SubjectAltNames">
+            <summary>A comma-separated lists of alternative subject names of the certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.ThumbprintMD5">
+            <summary>MD5 hash of the certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.ThumbprintSHA1">
+            <summary>SHA1 hash of the certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.ThumbprintSHA256">
+            <summary>SHA256 hash of the certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.Usage">
+            <summary>Text description of UsageFlags .</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.UsageFlags">
+            <summary>Flags that show intended use for the certificate.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.Certificate.Version">
+            <summary>The certificate's version number.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.XMLAttribute.#ctor">
+            <summary>An XML attribute from the current XML element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLAttribute.Name">
+            <summary>The Name provides the local name (without prefix)  of the attribute.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLAttribute.Namespace">
+            <summary>Attribute namespace.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLAttribute.Prefix">
+            <summary>Attribute prefix (if any).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLAttribute.Value">
+            <summary>Attribute value.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.XMLElement.#ctor">
+            <summary>An element contained within the XML document.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLElement.Name">
+            <summary>The Name field provides the local name (without prefix) of the element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLElement.Namespace">
+            <summary>Namespace of the element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLElement.Prefix">
+            <summary>Prefix of the element (if any).</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.XMLElement.XText">
+            <summary>The inner text of the element.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureBlobDetail.#ctor">
+            <summary>Represents a single Azure Blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureBlobDetail.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Int64,System.String,System.String,System.String,System.String,System.String)">
+            <summary>Represents a single Azure Blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.BlobType">
+            <summary>The type of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.CacheControl">
+            <summary>The Blob service stores this value but does not use or modify it.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.ContentEncoding">
+            <summary>The content encoding of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.ContentLanguage">
+            <summary>The content language of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.ContentLength">
+            <summary>The content size in bytes of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.ContentMD5">
+            <summary>The Content-MD5 of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.ContentType">
+            <summary>The MIME content type of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.ETag">
+            <summary>The ETag of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.LastModified">
+            <summary>The date and time the blob was last modified.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.LeaseStatus">
+            <summary>The lease status of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.Name">
+            <summary>The name of the blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.Snapshot">
+            <summary>The DateTime value that uniquely identifies a snapshot.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlobDetail.URL">
+            <summary>The URL of the blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureBlock.#ctor">
+            <summary>Represents a single bock of the Azure blob.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureBlock.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>Represents a single bock of the Azure blob.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlock.BlockType">
+            <summary>Indicates the type of the block.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlock.Id">
+            <summary>The ID of the block.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureBlock.Size">
+            <summary>The size of the block.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureContainer.#ctor">
+            <summary>Represents a single Azure Blob Container.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureContainer.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>Represents a single Azure Blob Container.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureContainer.ETag">
+            <summary>The ETag of the current container.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureContainer.LastModified">
+            <summary>The date and time the container was last modified.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureContainer.Name">
+            <summary>The name of the current container.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureContainer.URL">
+            <summary>The URL of the current container.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureMetadata.#ctor">
+            <summary>This type represents a single Azure metadata.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureMetadata.#ctor(System.String,System.String)">
+            <summary>This type represents a single Azure metadata.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMetadata.Name">
+            <summary>The name of the current metadata element.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMetadata.Value">
+            <summary>The value of the current metadata element.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureMessage.#ctor">
+            <summary>This type represents a single Azure message.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureMessage.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>This type represents a single Azure message.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMessage.DequeueCount">
+            <summary>When ListMessages is called, the message is dequeued and this value is incremented.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMessage.ExpirationTime">
+            <summary>The time at which the message will be automatically removed from the queue.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMessage.Id">
+            <summary>The Id of the message.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMessage.InsertionTime">
+            <summary>The time at which the message was first inserted into the queue.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMessage.PopReceipt">
+            <summary>The pop receipt of the message.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMessage.Text">
+            <summary>The message text.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureMessage.TimeNextVisible">
+            <summary>The time when the message will be visible to other clients.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureQueue.#ctor">
+            <summary>This type represents a single Azure queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureQueue.#ctor(System.String,System.String)">
+            <summary>This type represents a single Azure queue.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureQueue.Name">
+            <summary>The name of the queue.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureQueue.URL">
+            <summary>The URL of the queue.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureEntityProperty.#ctor">
+            <summary>This type represents a single Azure entity property.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureEntityProperty.#ctor(System.String,System.Int32,System.String)">
+            <summary>This type represents a single Azure entity property.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureEntityProperty.#ctor(System.String,System.Int32,System.Byte[])">
+            <summary>This type represents a single Azure entity property.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureEntityProperty.Name">
+            <summary>The name of the entity property.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureEntityProperty.Type">
+            <summary>The type of the entity property.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureEntityProperty.ValueB">
+            <summary>The value of the entity property.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureEntityProperty.Value">
+            <summary>The value of the entity property.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureTable.#ctor">
+            <summary>This type represents a single Azure table.</summary>
+        </member>
+        <member name="M:nsoftware.InAzure.AzureTable.#ctor(System.String,System.String,System.String)">
+            <summary>This type represents a single Azure table.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureTable.LastModified">
+            <summary>The last modified time of the table.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureTable.Name">
+            <summary>The name of the table.</summary>
+        </member>
+        <member name="P:nsoftware.InAzure.AzureTable.URL">
+            <summary>The URL of the table.</summary>
+        </member>
+    </members>
+</doc>
