@@ -17,9 +17,7 @@ Public Class Form1
         If ListTriggers.SelectedItems.Count = 0 Then Exit Sub
 
 
-
         Dim SelectedItem As ListViewItem = ListTriggers.SelectedItems(0)
-
 
 
         'SelectedTrigger = SelectedAccount.Triggers(SelectedItem.Name)
@@ -170,6 +168,104 @@ Public Class Form1
             Console.WriteLine("Could not login. Is ThinkAutomation Server running? " & ThinkAutomation.SystemErrorLast)
         End If
     End Sub
+
+    ' For Adding Action
+    Private Sub AddAction(strAccount As String)
+        Dim ThisAccount As ThinkAutomation.clsAccount
+
+        If strAccount.Length = 0 Then Exit Sub
+
+        ' login to ThinkAutomation on 127.0.0.1:8855
+        If ThinkAutomation.Server.Login("127.0.0.1:8855", "Admin", "") Then
+            ' logged in OK
+            MsgBox("Logged In")
+
+            Dim Name As String = InputBox("Enter The Action Condition", "ThinkAutomation")
+
+            If Name.Length = 0 Then Exit Sub
+
+            ' create a new trigger
+
+            Dim NewAction As New ThinkAutomation.clsAccountTrigger
+            NewAction.Name = Name
+            NewAction.CheckBodyAlso = True
+            NewAction.SubjectLineLIKE = "*TEST*"
+
+            ' create some field extraction
+
+            Dim Field As New ThinkAutomation.clsTriggerField
+            Field.Name = "Subject"
+            Field.ExtractBuiltIn = True
+            Field.ExtractBuiltInField = "%msg_subject%"
+
+
+            Dim Field2 As New ThinkAutomation.clsTriggerField
+            Field2.Name = "TestField"
+            Field2.LookFor = "ID"
+            Field2.ThenLookFor = ":"
+            Field2.Until_EndOfLine = True
+
+            ' add the fields to the fieldstoprocess collection
+
+            NewAction.FieldsToProcess.Add(Field)
+            NewAction.FieldsToProcess.Add(Field2)
+
+
+            ' create some default actions
+            Dim Comment As New ThinkAutomation.clsActionComment
+            Comment.Comment = "Actions Go Here"
+            Dim Popup As New ThinkAutomation.clsActionPopup
+            Popup.PopupMessage = "%Subject% %TestField%"
+
+
+            Dim IfBlock As New ThinkAutomation.clsActionLogical
+            IfBlock.LogicalType = ThinkAutomation.clsActionLogical.LogicalTypeNo.IfBlock
+
+            ' build condition for if block
+
+            Dim Condition As New ThinkAutomation.colConditionLines
+            Dim MsgBodyIsNotBlank As New ThinkAutomation.clsConditionLine
+            MsgBodyIsNotBlank.IfValue = "%msg_body%"
+            MsgBodyIsNotBlank.IsOperator = ThinkAutomation.clsConditionLine.IsOperatorType.IsNotBlank
+
+            Condition.Add(MsgBodyIsNotBlank)
+            Dim SubjectContainsTest As New ThinkAutomation.clsConditionLine
+            SubjectContainsTest.IfValue = "%Subject%"
+            SubjectContainsTest.IsAnd = True
+
+            SubjectContainsTest.IsOperator = ThinkAutomation.clsConditionLine.IsOperatorType.Contains
+            SubjectContainsTest.Value = "test"
+            Condition.Add(SubjectContainsTest)
+
+
+            IfBlock.Condition = Condition.XML
+            Dim EndIfBlock As New ThinkAutomation.clsActionLogical
+            EndIfBlock.LogicalType = ThinkAutomation.clsActionLogical.LogicalTypeNo.EndIfBlock
+
+            ' add the actions in the order we want them processed
+
+            NewAction.ActionList.Add(Comment)
+            NewAction.ActionList.Add(IfBlock)
+            NewAction.ActionList.Add(Popup)
+            NewAction.ActionList.Add(EndIfBlock)
+
+
+            ' add the trigger to the selected account's collection and save it on the server
+            Dim SelectedAccount As New ThinkAutomation.clsAccount
+            For Each ThisAccount In ThinkAutomation.Accounts
+                If ThisAccount.Name = strAccount Then
+                    SelectedAccount = ThisAccount
+                End If
+            Next
+            If SelectedAccount.Triggers.AddAndSave(NewAction) Then
+                MsgBox("Trigger Added")
+                ' add a message to test
+                NewAction.AddMessageToProcess("stephen@parkersoft.co.uk", "test@test.com", "Test Subject", "Test Body" & vbCrLf & vbCrLf & "ID: 12345" & vbCrLf)
+            End If
+        Else
+            Console.WriteLine("Could not login. Is ThinkAutomation Server running? " & ThinkAutomation.SystemErrorLast)
+        End If
+    End Sub
     Private Sub BtnAddAccount_Click(sender As Object, e As EventArgs) Handles BtnAddAccount.Click
         Dim Name As String = InputBox("Enter The Account Name", "ThinkAutomation")
 
@@ -219,6 +315,60 @@ Public Class Form1
             Console.WriteLine("Could not login. Is ThinkAutomation Server running? " & ThinkAutomation.SystemErrorLast)
         End If
     End Sub
+
+    ' Showing only triggers
+    Public Sub ListOnlyTriggers()
+        Dim ThisAccount As ThinkAutomation.clsAccount
+        Dim ThisTrigger As ThinkAutomation.clsAccountTrigger
+
+        ' login to ThinkAutomation on 127.0.0.1:8855
+        If ThinkAutomation.Server.Login("127.0.0.1:8855", "Admin", "") Then
+            For Each ThisAccount In ThinkAutomation.Accounts ' Accounts collection will contain all ThinkAutomation accounts after login
+
+                'Console.WriteLine("Account: " & ThisAccount.Name)
+                ' ListTriggers.Items.Add(ThisTrigger.Name)
+                ' get the Triggers from the server since these are not automatically loaded at Login
+                ThisAccount.Triggers.Load()
+                ' display all triggers for this account
+
+                For Each ThisTrigger In ThisAccount.Triggers
+                    'Console.WriteLine("Trigger: " & ThisTrigger.Name & " Has " & ThisTrigger.ActionList.Count.ToString & " Actions")
+                    ListTriggers.Items.Add("     " & "Trigger: " & ThisTrigger.Name & " Has " & ThisTrigger.ActionList.Count.ToString & " Actions")
+                Next
+
+            Next
+
+        Else
+            Console.WriteLine("Could not login. Is ThinkAutomation Server running? " & ThinkAutomation.SystemErrorLast)
+        End If
+    End Sub
+
+    ' Showing only actions
+    Public Sub ListOnlyActions()
+        Dim ThisAccount As ThinkAutomation.clsAccount
+        Dim ThisTrigger As ThinkAutomation.clsAccountTrigger
+
+        ' login to ThinkAutomation on 127.0.0.1:8855
+        If ThinkAutomation.Server.Login("127.0.0.1:8855", "Admin", "") Then
+            For Each ThisAccount In ThinkAutomation.Accounts ' Accounts collection will contain all ThinkAutomation accounts after login
+
+                'Console.WriteLine("Account: " & ThisAccount.Name)
+                ' ListTriggers.Items.Add(ThisTrigger.Name)
+                ' get the Triggers from the server since these are not automatically loaded at Login
+                ThisAccount.Triggers.Load()
+                ' display all triggers for this account
+
+                For Each ThisTrigger In ThisAccount.Triggers
+                    'Console.WriteLine("Trigger: " & ThisTrigger.Name & " Has " & ThisTrigger.ActionList.Count.ToString & " Actions")
+                    ListActions.Items.Add(ThisTrigger.ActionList.Count.ToString & " Actions")
+                Next
+
+            Next
+
+        Else
+            Console.WriteLine("Could not login. Is ThinkAutomation Server running? " & ThinkAutomation.SystemErrorLast)
+        End If
+    End Sub
     Private Sub BtnListAccounts_Click(sender As Object, e As EventArgs) Handles BtnListAccounts.Click
         ListAccountsAndTriggers()
     End Sub
@@ -227,5 +377,23 @@ Public Class Form1
         Dim Name As String = InputBox("Enter The Account Name", "ThinkAutomation")
         If Name.Length = 0 Then Exit Sub
         AddTrigger(Name)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' MsgBox("Hello, you can add Action here!")
+        Dim Name As String = InputBox("Enter The Account Name", "ThinkAutomation")
+        If Name.Length = 0 Then Exit Sub
+        Dim NameTrigger As String = InputBox("Enter the Trigger Name", "ThinkAutomation")
+        If Name.Length = 0 Then Exit Sub
+        AddAction(Name)
+
+    End Sub
+
+    Private Sub BtnListTriggers_Click(sender As Object, e As EventArgs) Handles BtnListTriggers.Click
+        ListOnlyTriggers()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ListOnlyActions()
     End Sub
 End Class
